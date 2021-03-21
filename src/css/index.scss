@@ -1,0 +1,105 @@
+@import './reset';
+
+body {
+  // padding: 0 10% 0;
+  height: 100vh;
+  // text-align: center;
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+  main {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+  }
+}
+
+.logo {
+  height: 100%;
+  background: lighten($color: black, $amount: 95);
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+  align-items: center;
+  .logo-img {
+    width: 10%;
+    svg {
+      width: 100%;
+    }
+  }
+  .logo-txt {
+    font-size: 2.65em;
+  }
+}
+
+.converter {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: lighten($color: black, $amount: 98);
+
+  .converter-img {
+    font-size: 5em;
+    color: rgb(56, 56, 56);
+  }
+  .converter-row {
+    height: 14%;
+    width: 70%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    #input,
+    #rates {
+      height: 100%;
+    }
+    #input {
+      padding-left: 10%;
+      width: 85%;
+      font-size: 2em;
+    }
+    #rates {
+      width: 15%;
+    }
+  }
+  .currency-name {
+    font-size: 2.5em;
+    color: rgb(56, 56, 56);
+    margin-top: 1%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .logo {
+    flex-flow: column nowrap;
+    .logo-img {
+      width: 18%;
+    }
+    .logo-txt {
+      font-size: 10vw;
+    }
+  }
+  .converter {
+    .converter-img {
+      font-size: 15vw;
+    }
+    .converter-row {
+      height: 15vw;
+      width: 90vw;
+      #input {
+        width: 75%;
+        font-size: 5vw;
+      }
+      #rates {
+        width: 25%;
+        font-size: 5vw;
+      }
+    }
+    .currency-name {
+      text-align: center;
+      font-size: 9vw;
+    }
+  }
+}

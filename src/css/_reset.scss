@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: none;
+  background-color: lighten($color: #000000, $amount: 30);
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+select {
+  border: none;
+  // outline: none;
+  text-align: center;
+  font-size: 1.5em;
+  background: rgb(127, 127, 156);
+  .currency-options {
+    background: white;
+    font-size: unset;
+  }
+}
